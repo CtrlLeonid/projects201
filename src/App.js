@@ -1,23 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import {Route, BrowserRouter, NavLink} from "react-router-dom";
+
+function ConyactUs(){
+    return (
+    <div className="container my-5">
+        <form action="">
+            <div className="mb-3"><input type="text" className="form-control"/></div>
+            <div className="mb-3"><input type="text" className="form-control"/></div>
+            <div className="mb-3"><input type="text" className="form-control"/></div>
+            <div className="mb-3"><input type="text" className="form-control"/></div>
+        </form>
+    </div>
+    )
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <BrowserRouter>
+            <nav className="nav">
+                <NavLink className="nav-link active" aria-current="page" to="#">Главная</NavLink>
+                <NavLink className="nav-link" to="/about">О нас</NavLink>
+                <NavLink className="nav-link" to="contact-us">Контакты</NavLink>
+            </nav>
+
+            <Route exact path="/" render={()=><h1>Главная стрница</h1>}/>
+            <Route path="/about" render={()=><h1>О нас</h1>}/>
+            <Route path="/contact-us"render={()=><h1>Страница контакты</h1>}/>
+        </BrowserRouter>
     </div>
   );
 }
