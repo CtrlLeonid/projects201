@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+body{
+  background-image: url(https://zastavok.net/main/creative-wallpaper/1426975621.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.card-img-top{
+  width: 250px;
+  margin-left: 215px;
+}
