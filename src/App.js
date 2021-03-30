@@ -1,4 +1,5 @@
 import './App.css';
+import React from "react";
 import {Route, BrowserRouter, NavLink} from "react-router-dom";
 
 function Menu(){
@@ -9,10 +10,6 @@ function Menu(){
             <NavLink className="nav-link" to="/contact-us">Контакты</NavLink>
         </nav>
     )
-}
-
-function Info() {
-    
 }
 
 function ContactUs(){
@@ -27,19 +24,17 @@ function ContactUs(){
         </div>
     )
 }
-
 function App() {
-  return (
-    <div className="App">
-        <BrowserRouter>
-            <Menu/>
-
-            <Route exact path="/" render={()=><h1>Главная стрница</h1>}/>
-            <Route path="/about" render={()=><h1>О нас</h1>}/>
-            <Route path="/contact-us"render={()=><h1><ContactUs/></h1>}/>
-        </BrowserRouter>
-    </div>
-  );
+    return (
+        <div className="App">
+            <BrowserRouter>
+                <Menu/>
+                <Route exact path="/" render={()=><h1>Главная страница</h1>} />
+                <Route path="/about" render={()=><h1>О нас</h1>}/>
+                <Route path="/contact-us" render={()=><ContactUs/>}/>
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;
