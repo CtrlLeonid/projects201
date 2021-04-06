@@ -30,7 +30,7 @@ function App() {
                 <Route exact path="/" render={()=><h1><PostList/></h1>} />
                 <Route path="/about" render={()=><h1><PageInfo/></h1>}/>
                 <Route path="/contact-us" render={()=><ContactUs/>}/>
-                <Route path="/post" render={()=><Post/>}/>
+                <Route path="/post/:id" render={(props)=><Post {...props}/>}/>
             </BrowserRouter>
         </div>
     );
