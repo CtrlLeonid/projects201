@@ -18,7 +18,6 @@ export class PostList extends React.Component{
         }
     }
     componentDidMount() {
-        console.log("Компонет PostList отрисован");
         fetch("http://le0nid.beget.tech/php/getPosts.php")
             .then(response=>response.json())
             .then(result=>{
@@ -40,7 +39,6 @@ export class PostList extends React.Component{
     }
 
     render() {
-        console.log("Компонет PostList рисуется");
         return <div className="container my-auto mt-5">
             <table className="table">
                 <thead>
